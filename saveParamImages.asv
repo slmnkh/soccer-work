@@ -1,0 +1,10 @@
+for i = 1:size(paramList)
+    
+    params = paramList(i,:);
+    
+    load([path '\' sprintf('[cCen1_%.04d][cCen2_%.04d][fInd_%.04d].mat',params(1),params(2),params(3))]);
+    
+    tP = wireFrameWatanabeFnFinal(880,140,params(1),params(2),params(3));
+    
+    
+        

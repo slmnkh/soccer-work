@@ -1,0 +1,9 @@
+% function 
+imgPath = '';
+imgList = dir([imgPath '\*.bmp']);
+
+paramList = [];
+
+for i = 1:length(imgList)
+    
+    I = imread([im]);

@@ -1,0 +1,14 @@
+I = imread('footballField.jpg');
+
+for i = 1:length(fieldModelGTTracks)
+    
+    close all;
+    figure; imshow(I); hold on
+    temp = fieldModelGTTracks{i};
+    team1 = temp(temp(:,3)==1,:);
+    team2 = temp(temp(:,3)==3,:);
+    plot(team1(:,1),team1(:,2),'r.');
+    plot(team2(:,1),team2(:,2),'b.');
+    
+    
+end

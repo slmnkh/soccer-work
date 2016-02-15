@@ -1,0 +1,9 @@
+% function 
+
+outPath = '';
+
+for i = 1:size(paramList,1)
+    
+    tP = wireFrameWatanabeFnFinal(880, 140, params(1), params(2), params(3));
+    opI = disPlayWarpedPts(tP);
+    imwrite()

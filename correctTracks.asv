@@ -1,0 +1,6 @@
+TracksTeam1 = {};
+
+for i = 1:length(fieldModelGTTracks)
+    
+    temp = fieldModelGTTracks{i};
+    temp = temp(t)

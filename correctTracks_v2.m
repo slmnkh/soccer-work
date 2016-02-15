@@ -1,0 +1,87 @@
+load Vid1Seq2_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [4 3 2 1 6 8 5 7 9 10]';
+for i = 1:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:10,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq2SalmanRearranged TT1
+
+
+
+load Vid1Seq3_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [3 2 6 5 8 1 4 0 0 0]';
+for i = 1:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:10,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq3SalmanRearranged TT1
+
+
+
+load Vid1Seq4_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [2 8 6 3 4 9 5 1 7 0]';
+for i = 1:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:10,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq4SalmanRearranged TT1
+
+
+load Vid1Seq5_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [5 3 1 4 9 7 10 8 0 0]';
+for i = 1:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:10,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq5SalmanRearranged TT1
+
+
+%%%%%%
+
+load Vid1Seq1_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [10 5 8 9 1 6 4 2 3 0 7]';
+for i = 72:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:11,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq1SalmanRearranged TT1
+
+%%%
+
+load Vid1Seq7_fieldModelGTTracksfromCP.mat
+correctTracks;
+temp = {};
+newIds = [0 4 9 10 7 5 8 1 6 2 3]';
+for i = 1:length(TracksTeam1)
+    tempF = TracksTeam1{i};
+    tempF(1:11,end) = newIds;
+    temp{i} = tempF;
+end
+
+TT1 = correctTracksFn(temp);
+save seq7SalmanRearranged TT1

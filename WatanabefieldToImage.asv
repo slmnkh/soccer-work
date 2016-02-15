@@ -1,0 +1,9 @@
+function WatanabefieldToImage(Pts, theta, phi, cPos, cCen)
+
+X = Pt(1);
+Y = Pt(2);
+R = [cos(phi)*cos(theta) -cos(phi)*sin(theta) -sin(phi);
+    f 0 X;
+    0 f Y];
+
+intP = inv(R)*[-]

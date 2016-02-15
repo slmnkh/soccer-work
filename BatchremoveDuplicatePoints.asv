@@ -1,0 +1,9 @@
+outPath = 'C:\Users\Amir\Desktop\ACM\testMatsClean';
+path = 'C:\Users\Amir\Desktop\ACM\testMats';
+
+for i = 1:length(list)
+    
+    load([path '\' list(i).name]);
+    tP = removeDuplicatePoints(temp);
+    str = [outPath '\' sprintf('[cCen1_%.04d][cCen2_%.04d][fInd_%.04d]',cPos1,cPos3,cCen1,cCen2,f)];
+    

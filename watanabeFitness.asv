@@ -1,0 +1,13 @@
+function score = watanabeFitness(tP,testPs);
+t
+threshold = 5;
+tP = tP(:,1:2);
+
+testPs = testPs(:,1:2);
+
+temp = abs(ipdm(testP, tP));
+temp = temp < 3;
+
+temp = sum(temp,2);
+temp = temp > 0;
+score = sum(temp);

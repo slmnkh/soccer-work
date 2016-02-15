@@ -1,0 +1,39 @@
+load FieldPts
+path = 'C:\Users\Amir\Desktop\ACM\testMats';
+% imgs = {};
+% cPos1Ind = 0;
+% cPos3Ind = 0;
+% cCen1Ind = 0;
+% cCen2Ind = 0;
+fInd = 0;
+for cPos1 = 880%700:7:1000
+%     cPos1Ind = cPos1Ind + 1;
+%     cPos1Ind
+%     cPos3Ind = 0;
+    cPos1
+    for cPos3 = 140%70:7:210
+%         cPos3Ind = cPos3Ind + 1;        
+%         cPos3Ind
+%         cCen1Ind = 0;
+        for cCen1 = 60:7:485
+%             cCen1Ind = cCen1Ind + 1;
+            cCen1
+            tic
+%             cCen2Ind = 0;
+            for cCen2 = 70:7:750
+%                 cCen2Ind = cCen2Ind + 1;
+%                 fInd = 0;
+                for f = 1500:20:2700
+%                     fInd = fInd + 1;
+                    temp = wireFrameWatanabeFnFinal(cPos1, cPos3, cCen1, cCen2, f, FieldPts);
+                    str = [path '\' sprintf('[cPos1_%.04d][cPos3_%.04d][cCen1_%.04d][cCen2_%.04d][fInd_%.04d]',cPos1,cPos3,cCen1,cCen2,f)];
+%                     imgs.cPos1{cPos1Ind}.cPos3{cPos3Ind}.cCen1{cCen1Ind}.cCen2{cCen2Ind}.fInd{fInd}.img = temp;
+                    save(str,'temp')
+%                     f
+                end
+            end
+            toc
+        end
+    end
+end
+            

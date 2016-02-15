@@ -1,0 +1,43 @@
+
+scores = [];
+path = 'C:\Users\Amir\Desktop\ACM\testMatsClean';
+% imPath = 'C:\Users\Amir\Desktop\test\lines';
+% imgList = dir([imPath '\*.bmp']);
+% list = dir([path '\[cPos1_0880][cPos3_0140]*.mat');
+[a,b] = find(I == 1);
+testPs = [a b];
+
+for i = 1:length(list)
+    tic
+    load([path '\' list(i).name]);
+    scores(i) = watanabefitness(tP, testPs);
+    i
+    toc 
+end
+
+%% search in bounds only
+
+ind = [];
+cCen1Mean = ;
+cCen2Mean = ;
+fMean = ;
+cCen1Range = ;
+cCen2Range = ;
+fRange = ;
+for i = 1:length(list)
+    
+    cCen1 = str2num(list(i).name(8:11));
+    cCen2 = str2num(list(i).name(20:23));
+    f = str2num(list(i).name(31:34));
+    
+    cCen1D = abs(cCen1-cCen1Mean);
+    cCen2D = abs(cCen2-cCen2Mean);
+    fD = abs(f-fMean);
+    
+    if cCen1D < cCen1Range & cCen1D < cCen1Range & cCen1D < cCen1Range
+        ind = [ind i];
+    end
+        
+
+
+
